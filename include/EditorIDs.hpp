@@ -14,7 +14,7 @@ namespace EditorIDs {
      *
      * @return The ID of the level, or m_levelID if the level is not editor.
      */
-    GEODE_EVENT_EXPORT_ID(int, getID(GJGameLevel* level), getID, (level), MY_MOD_ID "/getID-level");
+    GEODE_EVENT_EXPORT_ID(int, getID, (GJGameLevel* level), (level), MY_MOD_ID "/getID-level");
 
     /**
      * @brief Get the editor ID of a level or list.
@@ -23,7 +23,7 @@ namespace EditorIDs {
      *
      * @return The ID of the level, or m_levelID if the level is not editor.
      */
-    GEODE_EVENT_EXPORT_ID(int, getID(GJLevelList* list), static_cast<int(*)(GJLevelList*)>(getID), (list), MY_MOD_ID "/getID-list");
+    GEODE_EVENT_EXPORT_ID(int, getID, (GJLevelList* list), (list), MY_MOD_ID "/getID-list");
     /**
      * @brief Get the editor ID of a level or list.
      *
@@ -32,7 +32,7 @@ namespace EditorIDs {
      *
      * @return The ID of the level, or m_levelID if the level is not editor.
      */
-    GEODE_EVENT_EXPORT_ID(int, getID(GJGameLevel* level, bool autoAssign), static_cast<int(*)(GJGameLevel*, bool)>(getID), (level, autoAssign), MY_MOD_ID "/getID-level-autoAssign");
+    GEODE_EVENT_EXPORT_ID(int, getID, (GJGameLevel* level, bool autoAssign), (level, autoAssign), MY_MOD_ID "/getID-level-autoAssign");
     /**
      * @brief Get the editor ID of a level or list.
      *
@@ -41,7 +41,7 @@ namespace EditorIDs {
      *
      * @return The ID of the level, or m_levelID if the level is not editor.
      */
-    GEODE_EVENT_EXPORT_ID(int, getID(GJLevelList* list, bool autoAssign), static_cast<int(*)(GJLevelList*, bool)>&getID), (list, autoAssign), MY_MOD_ID "/getID-list-autoAssign");
+    GEODE_EVENT_EXPORT_ID(int, getID, (GJLevelList* list, bool autoAssign), (list, autoAssign), MY_MOD_ID "/getID-list-autoAssign");
 
     /**
      * @brief Get a level by its editor ID.
@@ -50,7 +50,7 @@ namespace EditorIDs {
      *
      * @return The level with the given ID, or nullptr if no level has that ID.
      */
-    GEODE_EVENT_EXPORT(GJGameLevel*, getLevelByID(int id), getLevelByID, (id));
+    GEODE_EVENT_EXPORT(GJGameLevel*, getLevelByID, (int id), (id));
 
     /**
      * @brief Get a list by its editor ID.
@@ -59,7 +59,7 @@ namespace EditorIDs {
      *
      * @return The list with the given ID, or nullptr if no list has that ID.
      */
-    GEODE_EVENT_EXPORT(GJLevelList*, getListByID(int id), getListByID, (id));
+    GEODE_EVENT_EXPORT(GJLevelList*, getListByID, (int id), (id));
 }
 
 //#undef MY_MOD_ID
